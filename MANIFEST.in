@@ -1,0 +1,13 @@
+include *.rst
+recursive-include doc *
+prune doc/_build
+prune doc/generated
+recursive-include notebooks DREAM_Prostate*.ipynb *.py
+recursive-include param_grid *.json
+recursive-include survival *.c *.h *.pyx *.pxd
+prune */__pycache__
+global-exclude *.pyc *~ *.bak *.swp *.pyo .gitignore
+include MANIFEST.in
+include COPYING
+include README.md
+recursive-exclude doc/dream *

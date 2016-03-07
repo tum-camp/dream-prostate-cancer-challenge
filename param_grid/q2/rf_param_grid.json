@@ -1,0 +1,4 @@
+{"n_estimators": [1000],
+"min_samples_split": [3, 5, 10, 25, 50, 100],
+"criterion": ["gini", "entropy"],
+"max_features": [null, "sqrt", "log2", 0.1]}

@@ -1,0 +1,4 @@
+{"ntree": [1000],
+"nodesize": [3, 5, 10, 25, 50, 100],
+"splitrule": ["logrank"],
+"nsplit": [0, 2, 5, 10]}
