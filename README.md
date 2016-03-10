@@ -55,8 +55,9 @@ chmod +x miniconda.sh
 ./miniconda.sh -b
 export PATH=~/miniconda3/bin:$PATH
 conda update --yes conda
-conda install --yes numpy scipy scikit-learn==0.16.1 numexpr ipython ipython-notebook \
-cython matplotlib pip mongodb pymongo
+conda create --yes --name dream-env python=3.4
+conda install --yes --name dream-env -c r --file requirements-conda.txt
+source active dream-env
 
 # Install patched version of pandas
 wget https://github.com/pydata/pandas/archive/v0.15.2.tar.gz -O pandas-0.15.2.tar.gz
@@ -69,10 +70,8 @@ patch -p1 -f -i bug2.patch
 python setup.py install
 cd ..
 
-# Install R
-conda install --yes -c r r r-rcpp r-foreach r-iterators r-plyr r-reshape2 \
-r-ggplot2 r-digest r-latticeextra r-stringi r-zoo r-coda
-R -e 'install.packages(c("mboost", "timeROC", "randomForestSRC", "VIM"), repos="http://cran.us.r-project.org", dependencies=TRUE)'
+# Install additional R packages
+R -e 'install.packages(c("mboost", "timeROC", "randomForestSRC", "VIM"), repos="http://cran.r-project.org", dependencies=TRUE)'
 
 # Install rpy2
 pip install rpy2
