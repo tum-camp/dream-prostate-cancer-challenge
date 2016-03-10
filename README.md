@@ -57,7 +57,7 @@ export PATH=~/miniconda3/bin:$PATH
 conda update --yes conda
 conda create --yes --name dream-env python=3.4
 conda install --yes --name dream-env -c r --file requirements-conda.txt
-source active dream-env
+source activate dream-env
 
 # Install patched version of pandas
 wget https://github.com/pydata/pandas/archive/v0.15.2.tar.gz -O pandas-0.15.2.tar.gz
