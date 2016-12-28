@@ -3,6 +3,8 @@
 This repository contains an implementation of survival models that have been used by the CAMP
 team for the [Prostate Cancer DREAM Challenge](https://www.synapse.org/ProstateCancerChallenge).
 
+## :bangbang: This repository is not actively maintained, please use [sebp/scikit-survival](https://github.com/sebp/scikit-survival) instead :bangbang:
+
 # Requirements
 __All code has only been tested on a Linux-based operating system, therefore
 we cannot guarantee that the code is going to run on other platforms__.
